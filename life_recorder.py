@@ -1,0 +1,1 @@
+print("This is the first canvas for life recorder")
