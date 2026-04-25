@@ -1,0 +1,1 @@
+print("This is the first canvas for squared and cubed processor")
