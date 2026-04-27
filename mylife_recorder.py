@@ -1,0 +1,1 @@
+print("This is the first initial for MY Life recorder")
