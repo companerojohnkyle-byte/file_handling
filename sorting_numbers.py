@@ -11,7 +11,6 @@ class NumberSorter:
 
             with open(self.even_file, 'w') as e_out, open(self.odd_file, 'w') as o_out:
                 for num in numbers:
-                    # 'if' code to check if even or odd
                     if num % 2 == 0:
                         e_out.write(f"{num}\n")
                     else:
