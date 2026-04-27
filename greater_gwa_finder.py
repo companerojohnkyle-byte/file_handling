@@ -1,19 +1,31 @@
-filename = r"C:\Python Programs\file_handling\GWA FINDER\student"
+class StudentGrades:
+    def __init__(self):
 
-file = open(filename, "r")
+        self.filename = r"C:\Python Programs\file_handling\GWA FINDER\student"
 
-best_gwa = 5.0
-best_student = ""
+    def get_highest(self):
+        best_gwa = 5.0 
+        best_student = ""
 
-for line in file:
-    data = line.strip().split(",")
-    name = data[0]
-    gwa = float(data[1])
-    
-    if gwa < best_gwa:
-        best_gwa = gwa
-        best_student = name
+        file = open(self.filename, "r")
+        lines = file.readlines()
+        file.close()
 
-file.close()
+        for line in lines:
+            data = line.strip().split(",")
+            
+            name = data[0]
+            gwa = float(data[1])
 
-print("Top Student:", best_student, "GWA:", best_gwa)
+            if gwa < best_gwa:
+                best_gwa = gwa
+                best_student = name
+                
+        print("-----------------------------------------")
+        print("The student with the highest GWA is:")
+        print(f"Name: {best_student}")
+        print(f"GWA: {best_gwa}")
+        print("-----------------------------------------")
+
+app = StudentGrades()
+app.get_highest()
